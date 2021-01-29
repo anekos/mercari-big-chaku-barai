@@ -19,6 +19,7 @@ fi
 
 # File path {{{
 
+NAME=mercari-big-chaku-barai
 MANIFEST=src/manifest.json
 PACKAGE=package.json
 
@@ -51,14 +52,16 @@ jq --arg version "$next_version" '.version = $version' < "$PACKAGE" | sponge "$P
 
 # Build {{{
 
-npm run build
+pushd src
+zip ../"${NAME}.zip" -- *.*
+popd
 
 # }}}
 
 # Git {{{
 
-git commit -m 'version++' "$MANIFEST" "$PACKAGE"
-git archive --format=zip HEAD >| copyf.src.zip
+git commit -m 'version++' "$MANIFEST" "$PACKAGE" ||:
+git archive --format=zip HEAD >| "${NAME}.src.zip"
 git tag "v$next_version"
 git push --tags
 

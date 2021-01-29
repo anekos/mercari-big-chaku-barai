@@ -3,5 +3,5 @@
 build:
 	npx parcel build src/manifest.json
 
-release:
+release: build
 	 ./script/release

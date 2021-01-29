@@ -1,7 +1,7 @@
 
 
 build:
-	npx parcel src/manifest.json
+	npx parcel build src/manifest.json
 
 release:
 	 ./script/release

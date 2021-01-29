@@ -1,31 +1,31 @@
 {
   "manifest_version": 2,
-
   "name": "Mercari Big Chaku-Barai",
-
   "description": "Make `着払い` text large ",
-  "version": "1.0",
-
+  "version": "1.0.0",
   "content_scripts": [
-      {
-        "matches": ["https://www.mercari.com/jp/items/*"],
-        "js": ["content.js"],
-        "run_at": "document_end",
-        "css": ["big.css"]
-      }
+    {
+      "matches": [
+        "https://www.mercari.com/jp/items/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "big.css"
+      ]
+    }
   ],
-
   "permissions": [
     "https://www.mercari.com/"
   ],
-
   "web_accessible_resources": [
     "big.css"
   ],
-
   "applications": {
-     "gecko": {
-       "id": "mercari-big-chaku-barai@mozilla.org"
-     }
-   }
+    "gecko": {
+      "id": "mercari-big-chaku-barai@mozilla.org"
+    }
+  }
 }

@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Mercari Big Chaku-Barai",
   "description": "Make `着払い` text large ",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "content_scripts": [
     {
       "matches": [

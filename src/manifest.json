@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.mercari.com/jp/items/*"
+        "https://jp.mercari.com/item/*"
       ],
       "js": [
         "content.js"
@@ -18,7 +18,7 @@
     }
   ],
   "permissions": [
-    "https://www.mercari.com/"
+    "https://jp.mercari.com/"
   ],
   "web_accessible_resources": [
     "big.css"
